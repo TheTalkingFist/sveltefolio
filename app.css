@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "titleFont";
+  src: url("/fonts/fonnts.com-Area_Normal_Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "mainFont";
+  src: url("/fonts/fonnts.com-Area_Normal_Thin.otf") format("opentype");
+}
+
+body {
+  font-size: 2em;
+  background-color: #00033D;
+  font-family: subtitleFont;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: #F5F3E7;
+  font-family: mainFont;
+  font-size: 1.5rem;
+  text-align: center;
+}
