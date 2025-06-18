@@ -42,15 +42,15 @@
         <p class="mb-0">&copy; 2025 Mikha'il Daanish</p>
 
         <div class="footer-center">
-            <img src=/image/icons/fistico.svg alt="Home" style="width: 30px; height: 30px;">
+            <img src="image/icons/fistico.svg" alt="Home" style="width: 30px; height: 30px;">
         </div>
 
         <div class="footer-right">
-            <img src="/image/icons/email.svg" alt="Email" class="icons">
+            <img src="image/icons/email.svg" alt="Email" class="icons">
 
-            <img src="/image/icons/github.svg" alt="GitHub" class="icons">
+            <img src="image/icons/github.svg" alt="GitHub" class="icons">
 
-            <img src="/image/icons/itch-io.svg" alt="Itch.io" class="icons">
+            <img src="image/icons/itch-io.svg" alt="Itch.io" class="icons">
         </div>
     </div>
 </footer>

@@ -18,25 +18,25 @@
 <div class="select_row">
   <ViewCard
     title="My Games"
-    image="/image/site-deco/placeholder.svg"
+    image="image/site-deco/placeholder.svg"
     link="/page"
   />
 
   <ViewCard
     title="Artworks"
-    image="/image/site-deco/placeholder.svg"
+    image="image/site-deco/placeholder.svg"
     link="/page2"
   />
 
   <ViewCard
     title="Pixel Illustrations"
-    image="/image/site-deco/placeholder.svg"
+    image="image/site-deco/placeholder.svg"
     link="/page3"
   />
 
   <ViewCard
     title="3d Artworks"
-    image="/image/site-deco/placeholder.svg"
+    image="image/site-deco/placeholder.svg"
     link="/page3"
   />
 </div>
