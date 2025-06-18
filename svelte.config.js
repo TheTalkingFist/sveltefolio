@@ -1,17 +1,17 @@
 import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
 
-const config = {
+const dev = process.env.NODE_ENV === 'development';
+
+export default {
+  preprocess: preprocess(),
   kit: {
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: null
-    }),
+    adapter: adapter(),
     paths: {
-      base: '/sveltefolio', // ← Replace this with your actual repo name, e.g., /sveltefolio
+      base: dev ? '' : '/sveltefolio'
+    },
+    prerender: {
+      entries: ['*']
     }
   }
 };
-
-export default config;
-
