@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import AboutCard from '$lib/AboutCard.svelte';
   import Footer from '$lib/Footer.svelte';
   import TitleHeader from '$lib/TitleHeader.svelte';

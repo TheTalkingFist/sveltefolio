@@ -1,7 +1,7 @@
 <script>
   import Page from "../routes/+page.svelte";
   import ViewCard from "./ViewCard.svelte";
-
+  import { base } from "$app/paths";
 </script>
 
 <style>

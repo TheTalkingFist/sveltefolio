@@ -1,17 +1,29 @@
+// svelte.config.js
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const dev = process.env.NODE_ENV === 'development';
+const dev = process.env.NODE_ENV !== 'production';
 
-export default {
-  preprocess: preprocess(),
-  kit: {
-    adapter: adapter(),
-    paths: {
-      base: dev ? '' : '/sveltefolio'
-    },
-    prerender: {
-      entries: ['*']
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+    preprocess: vitePreprocess(),
+    kit: {
+        adapter: adapter({
+            pages: 'build',
+            assets: 'build',
+            fallback: undefined,
+            precompress: false,
+            strict: true
+        }),
+        paths: {
+            base: dev ? '' : '/sveltefolio'
+            // Remove the assets line - let SvelteKit handle asset paths automatically
+        },
+        prerender: {
+            handleHttpError: 'warn',
+            entries: ['*']
+        }
     }
-  }
 };
+
+export default config;
