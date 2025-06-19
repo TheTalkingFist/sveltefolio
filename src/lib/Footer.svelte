@@ -1,5 +1,13 @@
 <script>
+    import { base } from '$app/paths';
 
+    // Base path for images
+    const src = `${base}/image/icons`;
+    const icons = [
+        { name: 'email', src: `${src}/email.svg` },
+        { name: 'github', src: `${src}/github.svg` },
+        { name: 'itch-io', src: `${src}/itch-io.svg` }
+    ];
 </script>
 
 <style>
@@ -46,11 +54,11 @@
         </div>
 
         <div class="footer-right">
-            <img src="{base}/image/icons/email.svg" alt="Email" class="icons">
-
-            <img src="{base}/image/icons/github.svg" alt="GitHub" class="icons">
-
-            <img src="{base}/image/icons/itch-io.svg" alt="Itch.io" class="icons">
+            {#each icons as icon}
+                <a href="https://{icon.name}.com" target="_blank" rel="noopener noreferrer">
+                    <img src="{icon.src}" alt="{icon.name}" class="icons">
+                </a>
+            {/each}
         </div>
     </div>
 </footer>

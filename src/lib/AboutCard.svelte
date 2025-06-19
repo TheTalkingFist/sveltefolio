@@ -1,5 +1,6 @@
 <script>
     import { base } from '$app/paths';
+    const src = `${base}/image/site-deco/FistDoesStuff.png`;
 </script>
 
 <style>
@@ -28,7 +29,7 @@
 </style>
 
 <section class="about">
-    <img src="{base}/image/site-deco/FistDoesStuff.png" alt="Mikha'il Daanish" class="profile-image">
+    <img src={src} alt="Mikha'il Daanish" class="profile-image">
     <p>
         From the Immersive Applications and Game course in ITE CC, I have a strong foundation in design. I'm always looking for ways to better myself as a game artist and designer.
     </p>

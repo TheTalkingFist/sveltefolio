@@ -1,6 +1,7 @@
 <script>
   import Page from "../routes/+page.svelte";
   import ViewCard from "./ViewCard.svelte";
+
 </script>
 
 <style>
@@ -18,25 +19,25 @@
 <div class="select_row">
   <ViewCard
     title="My Games"
-    image="{base}/image/site-deco/placeholder.svg"
+    image={`${base}/image/site-deco/placeholder.svg`}
     link="/page"
   />
 
   <ViewCard
     title="Artworks"
-    image="{base}/image/site-deco/placeholder.svg"
+    image={`${base}/image/site-deco/placeholder.svg`}
     link="/page2"
   />
 
   <ViewCard
     title="Pixel Illustrations"
-    image="{base}/image/site-deco/placeholder.svg"
+    image={`${base}/image/site-deco/placeholder.svg`}
     link="/page3"
   />
 
   <ViewCard
     title="3d Artworks"
-    image="{base}/image/site-deco/placeholder.svg"
+    image={`${base}/image/site-deco/placeholder.svg`}
     link="/page3"
   />
 </div>
