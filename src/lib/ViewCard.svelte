@@ -4,6 +4,12 @@
 </script>
 
 <style>
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+        margin: 0 auto;
+    }
+
     .card-title {
         font-family: mainFont;
         font-size: 0.55em;
@@ -23,9 +29,11 @@
     }
 </style>
 
-<div class="card button-container" style="width: 14rem;">
-  <img src={image} class="card-img-top" alt={title}>
-  <div class="card-body text-center">
-    <h5 class="card-title">{title}</h5>
+<a href="/my-games" class="text-decoration-none card-link">
+  <div class="card button-container" style="width: 14rem;">
+    <img src={image} class="card-img-top" alt={title}>
+    <div class="card-body text-center">
+      <h5 class="card-title">{title}</h5>
+    </div>
   </div>
-</div>
+</a>
