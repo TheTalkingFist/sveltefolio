@@ -1,0 +1,45 @@
+<script>
+    import { base } from '$app/paths';
+
+    export let GalleryItem
+</script>
+
+
+<style>
+    .card {
+        padding: 10px;
+        max-width: 360px;
+        height: 500px;
+        max-height: 300px;
+    }
+    
+    .card-title {
+        font-family: titleFont;
+        font-size: 1.2rem;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 360px;
+        object-fit: cover;
+        display: block;
+        aspect-ratio: 16 / 9;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 0px auto;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+</style>
+
+
+<div class="card">
+    <img src={`${base}/image/site-deco/placeholder.svg`}>
+
+    <div class="card-body">
+        <p class="card-title">{GalleryItem}</p>
+    </div>
+</div>
