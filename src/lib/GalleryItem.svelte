@@ -1,5 +1,6 @@
 <script>
     import { base } from '$app/paths';
+    import GameModal from './GameModal.svelte';
 
     export let GalleryItem
 </script>
