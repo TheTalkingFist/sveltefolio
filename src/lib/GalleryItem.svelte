@@ -3,6 +3,16 @@
     import GameModal from './GameModal.svelte';
 
     export let GalleryItem
+
+    let isOpen = false;
+
+    function openModal() {
+        isOpen = true;
+    }
+
+    function closeModal() {
+        isOpen = false;
+    }
 </script>
 
 
@@ -36,8 +46,9 @@
     }
 </style>
 
+<GameModal {isOpen} on:close={closeModal} image={`${base}/image/site-deco/placeholder.svg`} />
 
-<div class="card">
+<div class="card" on:click={openModal}>
     <img src={`${base}/image/site-deco/placeholder.svg`}>
 
     <div class="card-body">
