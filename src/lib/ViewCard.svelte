@@ -12,7 +12,7 @@
 
     .card-title {
         font-family: mainFont;
-        font-size: 0.45em;
+        font-size: 0.55em;
         color: #000000;
         margin: 0;
     }
@@ -26,6 +26,10 @@
         padding: 20px;
         border-radius: 10px;
         margin: 0 auto;
+    }
+
+    .card-img-top {
+        border-radius: 10px;
     }
 </style>
 

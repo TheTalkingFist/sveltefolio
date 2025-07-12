@@ -8,6 +8,7 @@
 <style>
     .header {
         text-align: center;
+        align-items: center;
         margin: 20px 0;
     }
 

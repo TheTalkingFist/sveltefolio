@@ -1,4 +1,5 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
     import { base } from '$app/paths';
     import Footer from '$lib/Footer.svelte';
     import PageTitle from '$lib/PageTitle.svelte';

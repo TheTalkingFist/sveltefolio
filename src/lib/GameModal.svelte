@@ -1,48 +1,65 @@
 <script>
-    export let isOpen = false;
-    export let image;
-
     import { createEventDispatcher } from 'svelte';
+    export let isOpen = false;
+    export let closeModal;
+    export let image;
 
     const dispatch = createEventDispatcher();
 
-    function closeModal() {
+    function handleClose() {
         dispatch('close');
     }
-
-
 </script>
 
-
 <style>
-
     .modal-background {
-        background-color: rgba(0, 0, 0, 0.8);
-        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        align-items: center;
-        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: block;
+    }
+    
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1a1a1a;
+        width: 85%;
+        max-width: 800px;
+        max-height: 90vh;
+        border-radius: 13px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        overflow-y: auto;
+        color: white;
+        z-index: 10000;
+        opacity: 1;
+        visibility: visible;
     }
 
-    .modal {
-        width: 85%;
-        height: 90%;
-        margin: 0 auto;
-        border-radius: 13px;
-        background-color: #1a1a1a;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #977DFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        z-index: 10001;
     }
 
     .modal-img {
         width: 60%;
-        margin: 20px auto;
         height: auto;
+        margin: 20px auto;
+        display: block;
         border-radius: 13px;
     }
 </style>
@@ -50,11 +67,9 @@
 {#if isOpen}
     <div class="modal-background">
         <div class="modal">
-            <button on:click={closeModal}>Close</button>
+            <button class="close-button" on:click={handleClose}>Close</button>
             <img src={image} class="modal-img" alt="Game" />
-
             <h2>Game Title</h2>
-
             <p>Test Game Description. Game description goes here. This is where the description of the game goes. Here is where the game descri</p>
         </div>
     </div>

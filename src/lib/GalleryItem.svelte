@@ -1,4 +1,5 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
     import { base } from '$app/paths';
     import GameModal from './GameModal.svelte';
 
