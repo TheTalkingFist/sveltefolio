@@ -3,7 +3,8 @@
     import { base } from '$app/paths';
     import GameModal from './GameModal.svelte';
 
-    export let GalleryItem
+    export let galleryTitle;
+    export let description = "";
 
     let isOpen = false;
 
@@ -47,12 +48,23 @@
     }
 </style>
 
-<GameModal {isOpen} on:close={closeModal} image={`${base}/image/site-deco/placeholder.svg`} />
+<GameModal 
+    {isOpen} on:close={closeModal} 
+    image={`${base}/image/site-deco/placeholder.svg`}
+    galleryTitle={galleryTitle}
+    description={description}
+/>
 
-<div class="card" on:click={openModal}>
-    <img src={`${base}/image/site-deco/placeholder.svg`}>
+<div 
+    class="card" 
+    on:click={openModal} 
+    on:keydown={(e) => e.key === 'Enter' && openModal()} 
+    role="button"
+    tabindex="0"
+>
+    <img src={`${base}/image/site-deco/placeholder.svg`} alt="Gallery item preview">
 
     <div class="card-body">
-        <p class="card-title">{GalleryItem}</p>
+        <p class="card-title">{galleryTitle}</p>
     </div>
 </div>

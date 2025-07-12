@@ -1,8 +1,9 @@
 <script>
     import { createEventDispatcher } from 'svelte';
     export let isOpen = false;
-    export let closeModal;
     export let image;
+    export let galleryTitle = "";
+    export let description = "";
 
     const dispatch = createEventDispatcher();
 
@@ -24,6 +25,7 @@
     }
     
     .modal {
+        display: block !important;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -40,6 +42,7 @@
         z-index: 10000;
         opacity: 1;
         visibility: visible;
+        text-align: center;
     }
 
     .close-button {
@@ -56,7 +59,10 @@
     }
 
     .modal-img {
-        width: 60%;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        aspect-ratio: 16 / 9;
         height: auto;
         margin: 20px auto;
         display: block;
@@ -69,8 +75,8 @@
         <div class="modal">
             <button class="close-button" on:click={handleClose}>Close</button>
             <img src={image} class="modal-img" alt="Game" />
-            <h2>Game Title</h2>
-            <p>Test Game Description. Game description goes here. This is where the description of the game goes. Here is where the game descri</p>
+            <h2 style="font-family: titleFont">{galleryTitle}</h2>
+            <p>{description}</p>
         </div>
     </div>
 {/if}

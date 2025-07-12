@@ -11,7 +11,7 @@
     }
 
     .card-title {
-        font-family: mainFont;
+        font-family: titleFont;
         font-size: 0.55em;
         color: #000000;
         margin: 0;

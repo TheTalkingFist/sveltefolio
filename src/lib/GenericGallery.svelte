@@ -44,15 +44,8 @@
     <GalleryItem
         title="Example Item 1"
         imageUrl={`${base}/image/site-deco/placeholder.svg`}
-        description="This is an example item in the gallery."
-        GalleryItem="Skeleton Book: Salvation Be Damned"
-    />
-
-    <GalleryItem
-        title="Example Item 2"
-        imageUrl={`${base}/image/site-deco/placeholder.svg`}
-        description="This is an example item in the gallery."
-        GalleryItem="WHITESPACE"
+        description="For the Game Development module in my course, this is a top-down, 3D shooter game that includes different types of attacks, enemy AI and a bossfight."
+        galleryTitle="Skeleton Book: Salvation Be Damned"
     />
 </div>
 
