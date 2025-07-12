@@ -21,23 +21,6 @@
         border-radius: 8px;
         margin: 0 auto;
     }
-
-    .gallery-item {
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .gallery-item img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 4px;
-    }
-
-    .gallery-item h3 {
-        margin-top: 0.5rem;
-    }
 </style>
 
 <div class="gallery">
@@ -46,6 +29,20 @@
         imageUrl={`${base}/image/site-deco/placeholder.svg`}
         description="For the Game Development module in my course, this is a top-down, 3D shooter game that includes different types of attacks, enemy AI and a bossfight."
         galleryTitle="Skeleton Book: Salvation Be Damned"
+    />
+
+    <GalleryItem
+        title="Example Item 2"
+        imageUrl={`${base}/image/site-deco/placeholder.svg`}
+        description="Made for the Game Level Production module, this is a top-down interactive thematic game that involves snapping pictures of various artifacts while using the same camera to defend yourself."
+        galleryTitle="WHITESPACE"
+    />
+
+    <GalleryItem
+        title="Example Item 3"
+        imageUrl={`${base}/image/site-deco/placeholder.svg`}
+        description="A text-based stealth game, involving you searching for a weapon in a house where someone is searching for you."
+        galleryTitle="The Stealthiest Hitman"
     />
 </div>
 
