@@ -67,7 +67,7 @@
     role="button"
     tabindex="0"
 >
-    <img src={`${base}/image/site-deco/placeholder.svg`} alt="Gallery item preview">
+    <img src={imageUrl} alt="Gallery item preview">
 
     <div class="card-body">
         <p class="card-title">{galleryTitle}</p>

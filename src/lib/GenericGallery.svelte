@@ -5,7 +5,6 @@
     import PageTitle from '$lib/PageTitle.svelte';
 
     import GalleryItem from './GalleryItem.svelte';
-
     export let videoTitle;
 </script>
 
@@ -28,6 +27,7 @@
 <div class="gallery">
     <GalleryItem
         title="Example Item 1"
+        imageUrl={`${base}/image/site-deco/SkeletonBook_tn.png`}
         videoTitle='https://www.youtube.com/embed/QQNfLkI_4z0';
         description="For the Game Development module in my course, this is a top-down, 3D shooter game that includes different types of attacks, enemy AI and a bossfight."
         galleryTitle="Skeleton Book: Salvation Be Damned"
@@ -35,6 +35,7 @@
 
     <GalleryItem
         title="Example Item 2"
+        imageUrl={`${base}/image/site-deco/WHITESPACE_tn.png`}
         videoTitle='https://www.youtube.com/embed/7cOO3OXlbzw';
         description="Made for the Game Level Production module, this is a top-down interactive thematic game that involves snapping pictures of various artifacts while using the same camera to defend yourself."
         galleryTitle="WHITESPACE"
