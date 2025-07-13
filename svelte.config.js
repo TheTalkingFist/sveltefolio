@@ -49,8 +49,7 @@ const config = {
             base: dev ? '' : '/sveltefolio'
         },
         prerender: {
-            handleHttpError: 'warn',
-            entries: ['*']
+            entries: []
         }
     }
 };
