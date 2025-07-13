@@ -1,4 +1,5 @@
 <script>
+    import { base } from "$app/paths";
     export let title;
     export let image;
 </script>
@@ -33,7 +34,7 @@
     }
 </style>
 
-<a href="/my-games" class="text-decoration-none card-link">
+<a href="{base}/my-games" class="text-decoration-none card-link">
   <div class="card button-container" style="width: 14rem;">
     <img src={image} class="card-img-top" alt={title}>
     <div class="card-body text-center">
