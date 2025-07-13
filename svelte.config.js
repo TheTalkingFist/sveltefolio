@@ -41,7 +41,7 @@ const config = {
         adapter: adapter({
             pages: 'build',
             assets: 'build',
-            fallback: 'index.html',  // Change from undefined to 'index.html'
+            fallback: '404.html',  // Change from undefined to 'index.html'
             precompress: false,
             strict: true
         }),
