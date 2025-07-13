@@ -24,20 +24,8 @@
   />
 
   <ViewCard
-    title="Artworks"
+    title="Projects"
     image={`${base}/image/site-deco/placeholder.svg`}
     link="/page2"
-  />
-
-  <ViewCard
-    title="Pixel Illustrations"
-    image={`${base}/image/site-deco/placeholder.svg`}
-    link="/page3"
-  />
-
-  <ViewCard
-    title="3d Artworks"
-    image={`${base}/image/site-deco/placeholder.svg`}
-    link="/page3"
   />
 </div>

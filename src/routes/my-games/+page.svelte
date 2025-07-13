@@ -4,6 +4,7 @@
     import GenericGallery from '$lib/GenericGallery.svelte';
     import GameModal from '$lib/GameModal.svelte';
     import Footer from '$lib/Footer.svelte';
+  import HomeButton from '$lib/HomeButton.svelte';
 </script>
 
 <PageTitle 
@@ -12,5 +13,7 @@
 />
 
 <GenericGallery />
+
+<HomeButton />
 
 <Footer />

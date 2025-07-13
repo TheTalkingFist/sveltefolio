@@ -6,6 +6,9 @@
     export let galleryTitle;
     export let description = "";
 
+    export let image1;
+    export let image2;
+
     export let imageUrl;
     export let videoTitle;
 
@@ -56,6 +59,8 @@
     on:close={closeModal} 
     image={imageUrl}
     videoTitle={videoTitle}
+    image1={image1}
+    image2={image2}
     {galleryTitle}
     {description}
 />

@@ -8,6 +8,9 @@
     export let galleryTitle = "";
     export let description = "";
 
+    export let image1;
+    export let image2;
+
     const dispatch = createEventDispatcher();
 
     function handleClose() {
@@ -78,6 +81,13 @@
         display: block;
         border-radius: 13px;
     }
+
+    .modal-img-sec {
+        width: 75%;
+        margin: 20px auto;
+        display: block;
+        border-radius: 13px;
+    }
     
     iframe.modal-media {
         border: none;
@@ -87,7 +97,7 @@
 {#if isOpen}
     <div class="modal-background">
         <div class="modal">
-            <button class="close-button" on:click={handleClose}>Close</button>
+            <button class="close-button" on:click={handleClose} style="font-family: titleFont;">X</button>
             
             <!-- Show YouTube video if videoTitle is provided, otherwise show image -->
             {#if videoTitle}
@@ -104,7 +114,12 @@
             {/if}
             
             <h2 style="font-family: titleFont">{galleryTitle}</h2>
-            <p>{description}</p>
+            <p>{@html description.replace(/\n/g, '<br>')}</p>
+
+            {#if !videoTitle}
+                <img src={image1} class="modal-img-sec" alt="Game Thumbnail 1" />
+                <img src={image2} class="modal-img-sec" alt="Game Thumbnail 2" />
+            {/if}
         </div>
     </div>
 {/if}
