@@ -6,6 +6,9 @@
     export let galleryTitle;
     export let description = "";
 
+    export let imageUrl;
+    export let videoTitle;
+
     let isOpen = false;
 
     function openModal() {
@@ -49,10 +52,12 @@
 </style>
 
 <GameModal 
-    {isOpen} on:close={closeModal} 
-    image={`${base}/image/site-deco/placeholder.svg`}
-    galleryTitle={galleryTitle}
-    description={description}
+    {isOpen} 
+    on:close={closeModal} 
+    image={imageUrl}
+    videoTitle={videoTitle}
+    {galleryTitle}
+    {description}
 />
 
 <div 

@@ -31,6 +31,6 @@
 <section class="about">
     <img src={src} alt="Mikha'il Daanish" class="profile-image">
     <p>
-        From the Immersive Applications and Game course in ITE CC, I have a strong foundation in design. I'm always looking for ways to better myself as a game artist and designer.
+        From the Immersive Applications and Game course in ITE CC, I have a strong foundation in game development. I'm always looking for ways to better myself as a game creator and developer.
     </p>
 </section>

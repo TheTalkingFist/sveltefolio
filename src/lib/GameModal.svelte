@@ -1,7 +1,10 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { base } from '$app/paths';
+    
     export let isOpen = false;
     export let image;
+    export let videoTitle = null; // For YouTube embed URL
     export let galleryTitle = "";
     export let description = "";
 
@@ -58,15 +61,26 @@
         z-index: 10001;
     }
 
-    .modal-img {
+    .modal-media {
         width: 100%;
         max-width: 600px;
-        height: auto;
         aspect-ratio: 16 / 9;
-        height: auto;
         margin: 20px auto;
         display: block;
         border-radius: 13px;
+    }
+    
+    .modal-img {
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 16 / 9;
+        margin: 20px auto;
+        display: block;
+        border-radius: 13px;
+    }
+    
+    iframe.modal-media {
+        border: none;
     }
 </style>
 
@@ -74,7 +88,21 @@
     <div class="modal-background">
         <div class="modal">
             <button class="close-button" on:click={handleClose}>Close</button>
-            <img src={image} class="modal-img" alt="Game" />
+            
+            <!-- Show YouTube video if videoTitle is provided, otherwise show image -->
+            {#if videoTitle}
+                <iframe 
+                    class="modal-media" 
+                    src={videoTitle}
+                    title={galleryTitle}
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            {:else}
+                <img src={image} class="modal-img" alt="Game" />
+            {/if}
+            
             <h2 style="font-family: titleFont">{galleryTitle}</h2>
             <p>{description}</p>
         </div>
