@@ -27,6 +27,13 @@
         margin: 0 7px;
     }
 
+    .tech-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        filter: brightness(0) invert(1);
+    }
+
     .footer-grid {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
@@ -48,10 +55,16 @@
 <footer class="py-3 mt-5 border-top">
     <div class="container footer-grid">
         <p class="mb-0">&copy; 2025 Mikha'il Daanish</p>
-
-        <div class="footer-center">
-            <img src="{base}/image/icons/fistico.svg" alt="Home" style="width: 30px; height: 30px;">
-        </div>
+            <div class="footer-center" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="{base}/image/icons/fistico.svg" alt="Home" style="width: 30px; height: 30px; margin-bottom: 10px;">
+                <div class="made-with" style="display: flex; flex-direction: column; align-items: center;">
+                    <p style="font-size: 15px;">Made with
+                        <img src="{base}/image/icons/svelte.svg" alt="Svelte" class="tech-icon">
+                        and
+                        <img src="{base}/image/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
+                    </p>
+                </div>
+            </div>
 
         <div class="footer-right">
             {#each icons as icon}
