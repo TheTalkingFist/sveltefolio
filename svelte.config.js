@@ -49,7 +49,7 @@ const config = {
             base: dev ? '' : '/sveltefolio'
         },
         prerender: {
-            entries: []
+            entries: ['/']
         }
     }
 };
