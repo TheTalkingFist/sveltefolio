@@ -55,9 +55,19 @@
 
         <div class="footer-right">
             {#each icons as icon}
-                <a href="https://{icon.name}.com" target="_blank" rel="noopener noreferrer">
-                    <img src="{icon.src}" alt="{icon.name}" class="icons">
-                </a>
+                {#if icon.name === 'email'}
+                    <a href="mailto:mikhail19871983@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="{icon.src}" alt="{icon.name}" class="icons">
+                    </a>
+                {:else if icon.name === 'github'}
+                    <a href="https://github.com/TheTalkingFist" target="_blank" rel="noopener noreferrer">
+                        <img src="{icon.src}" alt="{icon.name}" class="icons">
+                    </a>
+                {:else if icon.name === 'itch-io'}
+                    <a href="https://thetalkingfist.itch.io/" target="_blank" rel="noopener noreferrer">
+                        <img src="{icon.src}" alt="{icon.name}" class="icons">
+                    </a>
+                {/if}
             {/each}
         </div>
     </div>
