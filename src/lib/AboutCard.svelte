@@ -1,14 +1,17 @@
 <script>
     import { base } from '$app/paths';
-    const src = `${base}/image/site-deco/FistDoesStuff.png`;
+    const src = `${base}/image/site-deco/me.jpg`;
 </script>
 
 <style>
     .profile-image {
         border: solid 5px #F5F3E7;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
         width: 230px;
         height: 230px;
-        border-radius: 15%;
+        border-radius: 50%;
     }
 
     .about {
