@@ -22,10 +22,4 @@
     image={`${base}/image/site-deco/placeholder.svg`}
     link="/page"
   />
-
-  <ViewCard
-    title="Projects"
-    image={`${base}/image/site-deco/placeholder.svg`}
-    link="/page2"
-  />
 </div>
