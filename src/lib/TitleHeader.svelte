@@ -60,6 +60,6 @@
   <h1 class="title" style="font-family: mainFont;">BIN&nbsp;MOHAMED&nbsp;HAIDIR</h1>
   <br>
   <h2 class="subtitle">
-    Applying for a Diploma in Applications, Games and Visual Effects (C29)
+    Applying for a Diploma in Game Development and Technology (C70)
   </h2>
 </section>
